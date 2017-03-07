@@ -7,23 +7,45 @@ This rule will enforce whether or not to use shorthand when possible to keep con
 
 ## Rule Details
 
-This rule takes one argument, when to use shorthand: `always` or `never` (default is always`).
+This rule takes one argument, when to use shorthand: `always` or `never` (default is always).
 
-The following patterns are considered warnings:
+### `always`
+
+Example of __incorrect__ code when configured to enforce `always` using the
+shorthand:
 
 ```js
 /*eslint Underscore/prop-shorthand: [2, "always"]*/
-var ids = _.map(users, function (user) {
-  return user.name;
+var admins = _.filter(users, function (user) {
+  return user.isAdmin;
 });
 ```
 
-The following patterns are not considered warnings:
+Example of __correct__ code when configured to enforce `always` using the
+shorthand:
+
+```js
+/*eslint Underscore/prop-shorthand: [2, "always"]*/
+var admins = _.filter(users, 'isAdmin');
+```
+
+### `never`
+
+Example of __incorrect__ code when configured to enforce `never` using the
+shorthand:
 
 ```js
 /*eslint Underscore/prop-shorthand: [2, "never"]*/
-var ids = _.map(users, function (user) {
-  return user.name;
+var admins = _.filter(users, 'isAdmin');
+```
+
+Example of __correct__ code when configured to enforce `never` using the
+shorthand:
+
+```js
+/*eslint Underscore/prop-shorthand: [2, "never"]*/
+var admins = _.filter(users, function (user) {
+  return user.isAdmin;
 });
 ```
 
