@@ -5,6 +5,8 @@ Forked from [eslint-plugin-lodash](https://github.com/wix/eslint-plugin-lodash)
 ESLint-plugin-underscore
 ===================
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/captbaritone/eslint-plugin-underscore.svg)](https://greenkeeper.io/)
+
 Linting rules for [Underscore](http://underscorejs.org/)
 
 # Installation
